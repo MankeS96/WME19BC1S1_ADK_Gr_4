@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ADK</string>
+    <string name="naglowekMain">Witaj w aplikacji\nobrazującej sygnał\nfonogramu serca!</string>
+    <string name="naglowek2Main">Jeśli posiadasz już konto, zaloguj się. Jeżeli nie, dołącz do nas za pomocą rejestracji</string>
+    <string name="logowanieMain">Logowanie</string>
+    <string name="rejestracjaMain">Rejestracja</string>
+</resources>
