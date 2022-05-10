@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d28c11af-4ccd-46d6-9073-c81736daaada" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/MSSADK.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/main.py" beforeDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +101,35 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="RunManager">
+    <configuration name="Signal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WME19BC1S1_ADK_Gr_4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebApp/src/BackEnd" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebApp/src/BackEnd/Signal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Signal" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,25 +139,18 @@
       <option name="presentableId" value="Default" />
       <updated>1652166704044</updated>
       <workItem from="1652166705955" duration="41000" />
-      <workItem from="1652167686361" duration="1238000" />
-      <workItem from="1652173237990" duration="3880000" />
-      <workItem from="1652195703598" duration="705000" />
+
+      <workItem from="1652213050568" duration="389000" />
+
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WME19BC1S1_ADK_Gr_4$Signal.coverage" NAME="Signal Coverage Results" MODIFIED="1652213434969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebApp/src/BackEnd" />
+
   </component>
 </project>
