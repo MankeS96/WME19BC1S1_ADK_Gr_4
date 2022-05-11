@@ -19,4 +19,6 @@
     <string name="enter_pesel">Numer PESEL</string>
     <string name="enter_numer">Numer telefonu</string>
     <string name="enter_haslo_reg">Ustaw swoje hasło</string>
+    <string name="wybierz_plec">Wybierz płeć:</string>
+    <string name="podaj_date">Podaj swoją datę urodzenia:</string>
 </resources>

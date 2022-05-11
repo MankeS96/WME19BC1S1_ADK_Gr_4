@@ -31,7 +31,63 @@
             android:orientation="vertical"
             android:layout_marginTop="10dp">
 
+            <TextView
+                android:id="@+id/wybierz_plec_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wybierz_plec"
+                android:textColor="@color/kolor1"
+                android:textSize="18sp"/>
 
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mezczyzna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Mężczyzna"/>
+                <RadioButton
+                    android:id="@+id/kobieta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Kobieta"/>
+                <RadioButton
+                    android:id="@+id/inne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Inne"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/podaj_date_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/podaj_date"
+                android:textColor="@color/kolor1"
+                android:textSize="18sp"/>
+
+            <DatePicker
+                android:id="@+id/date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"/>
 
             <Button
                 android:id="@+id/zarejestruj_button"
@@ -41,7 +97,9 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:background="@drawable/rounded_rectangle"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:onClick="callRegisterActivity3"
+                tools:ignore="OnClick" />
 
         </LinearLayout>
     </LinearLayout>
