@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADK">
         <activity
+            android:name=".RegisterActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity2"
+            android:exported="false" />
+        <activity
             android:name=".OknoUzytkownika"
             android:exported="false" />
         <activity
