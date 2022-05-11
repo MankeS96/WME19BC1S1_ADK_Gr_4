@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/ecg_kolor"
+            android:src="@drawable/ecgobraz"
             android:id = "@+id/Image1"
             android:contentDescription="@string/todo"/>
 
@@ -49,29 +49,29 @@
             android:layout_marginTop="10dp">
 
             <Button
-                android:id="@+id/Button1"
+                android:id="@+id/logowanie"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
-                android:background="#00000000"
-                android:fontFamily="sans-serif-black"
                 android:text="@string/logowanieMain"
-                android:textColor="@color/kolor2"
-                android:textSize="20sp" />
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_rectangle"
+                android:onClick="click"/>
 
             <Button
+                android:id = "@+id/rejestracja"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:textSize="20sp"
-                android:background="#00000000"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/kolor2"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_rectangle"
+                android:textColor="@color/white"
                 android:text="@string/rejestracjaMain"
-                android:id = "@+id/Button2"
+                android:onClick="click"
                 style="?android:attr/buttonBarButtonStyle" />
 
         </LinearLayout>
