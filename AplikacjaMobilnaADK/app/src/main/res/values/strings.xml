@@ -1,16 +1,18 @@
 <resources>
     <string name="app_name">ADK</string>
     <string name="naglowekMain">Witaj w aplikacji\nobrazującej sygnał\nfonogramu serca!</string>
-    <string name="naglowek2Main">Jeśli posiadasz już konto, zaloguj się. Jeżeli nie, dołącz do nas za pomocą rejestracji</string>
+    <string name="naglowek2Main">Jeśli posiadasz już konto, zaloguj się.\nJeżeli nie, dołącz do nas za pomocą rejestracji</string>
     <string name="logowanieMain">Logowanie</string>
     <string name="rejestracjaMain">Rejestracja</string>
     <string name="todo">TODO</string>
     <string name="nagloweklogowanie">Logowanie</string>
-    <string name="naglowekRejestracja">Rejestracja</string>
+    <string name="naglowekRejestracja1">Rejestracja 1/3</string>
+    <string name="naglowekRejestracja2">Rejestracja 2/3</string>
+    <string name="naglowekRejestracja3">Rejestracja 3/3</string>
     <string name="enter_username">Nazwa użytkownika</string>
     <string name="enter_password">Hasło</string>
     <string name="login_button">Zaloguj się</string>
-    <string name="register_button">Zarejestruj się</string>
+    <string name="register_button1">Przejdź dalej</string>
     <string name="enter_name">Imię</string>
     <string name="enter_surname">Nazwisko</string>
     <string name="enter_adress">Adres email</string>

@@ -19,7 +19,7 @@
             android:layout_width="351dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/naglowekRejestracja"
+            android:text="@string/naglowekRejestracja1"
             android:textAlignment="center"
             android:textColor="@color/kolor1"
             android:textSize="30sp"
@@ -124,29 +124,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/wpisz_numer_telefonu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:textColor="@color/kolor1"
-                android:hint="@string/enter_numer"
-                app:hintTextColor="@color/kolor2"
-                app:boxStrokeColor="@color/kolor2"
-                app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/numer"
-                app:startIconTint="@color/kolor2"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/kolor2">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/kolor2"
-                    android:inputType="text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/wpisz_haslo_reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,11 +151,13 @@
                 android:id="@+id/zarejestruj_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/register_button"
+                android:text="@string/register_button1"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:background="@drawable/rounded_rectangle"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:onClick="callRegisterActivity2"
+                tools:ignore="OnClick" />
 
         </LinearLayout>
     </LinearLayout>
