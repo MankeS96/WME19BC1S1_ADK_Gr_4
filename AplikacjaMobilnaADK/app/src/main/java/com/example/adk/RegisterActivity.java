@@ -51,14 +51,15 @@ public class RegisterActivity extends AppCompatActivity {
         haslo_rej.setAnimation(bottomAnim);
         zarejestrujB.setAnimation(bottomAnim);
 
-        zarejestrujB.setOnClickListener(v -> {
-            Toast toast1 = Toast.makeText(RegisterActivity.this, "Rejestracja przebiegła pomyślnie!", Toast.LENGTH_SHORT);
-            toast1.setGravity(Gravity.TOP|Gravity.CENTER, 5, 50);
-            toast1.show();
-            Toast toast2 = Toast.makeText(RegisterActivity.this, "Wróć do okna logowania,\naby zalogować się do aplikacji", Toast.LENGTH_LONG);
-            toast2.setGravity(Gravity.TOP|Gravity.CENTER, 5,50);
-            toast2.show();
-        });
+//        zarejestrujB.setOnClickListener(v -> {
+//            Toast toast1 = Toast.makeText(RegisterActivity.this, "Rejestracja przebiegła pomyślnie!", Toast.LENGTH_SHORT);
+//            toast1.setGravity(Gravity.TOP|Gravity.CENTER, 5, 50);
+//            toast1.show();
+//            Toast toast2 = Toast.makeText(RegisterActivity.this, "Wróć do okna logowania,\naby zalogować się do aplikacji", Toast.LENGTH_LONG);
+//            toast2.setGravity(Gravity.TOP|Gravity.CENTER, 5,50);
+//            toast2.show();
+//        });
+
         zarejestrujB.setOnClickListener(view -> {
             if(!validateImie() | !validateAdres() | !validateNazwisko() | !validatePESEL() | !validateHaslo()){
                 return;
@@ -93,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     public boolean validateNazwisko(){
-        String val = nazwisko_rej.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(nazwisko_rej.getEditText()).getText().toString().trim();
         String checkspaces = "\\A\\w{1,20}\\z";
         if(val.isEmpty()){
             nazwisko_rej.setError("Pole nie może być puste");
@@ -111,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     public boolean validatePESEL(){
-        String val = pesel_rej.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(pesel_rej.getEditText()).getText().toString().trim();
         String checkspaces = "\\A\\w{1,20}\\z";
         if(val.isEmpty()){
             pesel_rej.setError("Pole nie może być puste");
@@ -129,7 +130,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     public boolean validateAdres(){
-        String val = email_rej.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(email_rej.getEditText()).getText().toString().trim();
         String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         if(val.isEmpty()){
             email_rej.setError("Pole nie może być puste");
@@ -144,7 +145,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     public boolean validateHaslo(){
-        String val = haslo_rej.getEditText().getText().toString().trim();
+        String val = Objects.requireNonNull(haslo_rej.getEditText()).getText().toString().trim();
         String checkHaslo = "^"+
                 "(?=.*[a-zA-Z])"+ // litery
                 "(?=.*\\S+$)"+ // bez pustych przestrzeni
