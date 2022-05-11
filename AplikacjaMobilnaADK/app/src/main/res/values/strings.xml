@@ -5,4 +5,9 @@
     <string name="logowanieMain">Logowanie</string>
     <string name="rejestracjaMain">Rejestracja</string>
     <string name="todo">TODO</string>
+    <string name="nagloweklogowanie">Logowanie</string>
+    <string name="naglowekRejestracja">Rejestracja</string>
+    <string name="enter_username">Nazwa użytkownika</string>
+    <string name="enter_password">Hasło</string>
+    <string name="login_button">Zaloguj się</string>
 </resources>

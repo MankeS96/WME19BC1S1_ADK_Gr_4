@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ogrel/AndroidStudioProjects/ADK2/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/layout/activity_login.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/drawable/rounded_rectangle.xml" value="0.1" />
+        <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/layout/activity_register.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/ogrel/Documents/GitHub/WME19BC1S1_ADK_Gr_4/AplikacjaMobilnaADK/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
