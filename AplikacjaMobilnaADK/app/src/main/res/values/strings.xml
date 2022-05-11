@@ -10,4 +10,11 @@
     <string name="enter_username">Nazwa użytkownika</string>
     <string name="enter_password">Hasło</string>
     <string name="login_button">Zaloguj się</string>
+    <string name="register_button">Zarejestruj się</string>
+    <string name="enter_name">Imię</string>
+    <string name="enter_surname">Nazwisko</string>
+    <string name="enter_adress">Adres email</string>
+    <string name="enter_pesel">Numer PESEL</string>
+    <string name="enter_numer">Numer telefonu</string>
+    <string name="enter_haslo_reg">Ustaw swoje hasło</string>
 </resources>
