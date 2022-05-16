@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     Animation topAnim, bottomAnim;
     TextView logowanie_naglowek;
     TextInputLayout nazwa_log, haslo_log;
-    Button zalogujB;
+    Button zalogujB, brakKonta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +34,24 @@ public class LoginActivity extends AppCompatActivity {
         haslo_log = findViewById(R.id.wpisz_haslo_log);
         zalogujB = findViewById(R.id.zaloguj_button);
         logowanie_naglowek = findViewById(R.id.Text1);
+        brakKonta = findViewById(R.id.brak_konta_button);
 
         logowanie_naglowek.setAnimation(topAnim);
         nazwa_log.setAnimation(bottomAnim);
         haslo_log.setAnimation(bottomAnim);
         zalogujB.setAnimation(bottomAnim);
+        brakKonta.setAnimation(bottomAnim);
     }
 
     public void callOknoUzytkownika(View view){
 
         Intent intent = new Intent(LoginActivity.this, OknoUzytkownika.class);
+        startActivity(intent);
+    }
+
+    public void callOknoRejestracji(View view){
+
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
     }
 }
