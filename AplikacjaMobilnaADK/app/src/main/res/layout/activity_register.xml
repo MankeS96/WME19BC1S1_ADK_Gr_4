@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".RegisterActivity"
     android:background="@color/background"
     android:padding="30dp">
 
@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/Text1rej"
+            android:id="@+id/naglowek_rej1"
             android:layout_width="351dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
         //Hooks
-        rejestracja_naglowek = findViewById(R.id.Text1rej);
+        rejestracja_naglowek = findViewById(R.id.naglowek_rej1);
         imie_rej = findViewById(R.id.wpisz_imie);
         nazwisko_rej = findViewById(R.id.wpisz_nazwisko);
         email_rej = findViewById(R.id.wpisz_adres_email);
