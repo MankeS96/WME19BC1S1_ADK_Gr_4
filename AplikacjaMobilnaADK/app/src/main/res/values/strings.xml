@@ -27,4 +27,5 @@
     <string name="komunikat_po_rejestracji1">Pomyślnie utworzono konto!</string>
     <string name="komunikat_po_rejestracji2">Powrót do ekranu logowania</string>
     <string name="brak_konta_button">Nie posiadasz konta?</string>
+    <string name="naglowek_oknouz">Witaj, użytowniku!</string>
 </resources>

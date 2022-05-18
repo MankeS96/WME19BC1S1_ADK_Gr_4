@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28c11af-4ccd-46d6-9073-c81736daaada" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/drawable/ecg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/drawable/ikona1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/layout/custom_grid_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/OknoPoRejestracji.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/OknoPoRejestracji.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/OknoUzytkownika.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/OknoUzytkownika.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity2.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity3.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/java/com/example/adk/RegisterActivity3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/layout/activity_okno_uzytkownika.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/layout/activity_okno_uzytkownika.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AplikacjaMobilnaADK/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSSADK/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSSADK/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +80,6 @@
       <module name="WME19BC1S1_ADK_Gr_4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\Users\ogrel\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MSSADK" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -103,6 +113,7 @@
       <workItem from="1652167686361" duration="1238000" />
       <workItem from="1652173237990" duration="3880000" />
       <workItem from="1652195703598" duration="705000" />
+      <workItem from="1652861972069" duration="2467000" />
     </task>
     <servers />
   </component>
