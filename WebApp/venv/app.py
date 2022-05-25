@@ -1,42 +1,17 @@
-from flask import Flask, jsonify, render_template
-from datetime import datetime
-from flask_sqlalchemy import SQLAlchemy
-import time
+from flask import Flask, jsonify, request, abort
+from models import db, Doctor, Pacient
+from config import AplicationConfig
+from flask_bcrypt import Bcrypt
 
 # Create a Flask Instance
 app = Flask(__name__)
+app.config.from_object(AplicationConfig)
 
-# Add Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.adk'
-# Initialize The Database
-db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+db.init_app(app)
 
-
-class Pacient(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), nullable=False)
-    surrname = db.Column(db.String(30), nullable=False)
-    pesel = db.Column(db.String(11), unique=True, nullable=False)
-    login = db.Column(db.String(20), unique=True, nullable=False)
-    password = db.Column(db.String(20), nullable=False)
-    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-
-    def __repr__(self):
-        return f"Pacient('{self.login}', '{self.password}')"
-
-
-class Doctor(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), nullable=False)
-    surrname = db.Column(db.String(30), nullable=False)
-    pesel = db.Column(db.String(11), unique=True, nullable=False)
-    login = db.Column(db.String(20), unique=True, nullable=False)
-    password = db.Column(db.String(20), nullable=False)
-    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-
-    # Create a String 
-    def __repr__(self):
-        return f"Doctor('{self.login}', '{self.password}')"
+with app.app_context():
+    db.create_all()
 
 @app.route('/test')
 def test():
@@ -46,13 +21,35 @@ def test():
     }
     return response_body
 
-@app.route('/loginPage')
+
+@app.route('/login')
 def loginPage():
     return "<h1>Login page</h1>"
 
-@app.route('/registerPage')
+
+@app.route('/register', methods=["POST"])
 def registerPage():
-    return "<h1>Register page</h1>"
+    name = request.json["name"]
+    surrname = request.json["surrname"]
+    pesel = request.json["pesel"]
+    email = request.json["email"]
+    password = request.json["password"]
+
+    user_exists = Doctor.query.filter_by(email=email, pesel=pesel).first() is not None
+
+    if user_exists:
+        abort(409)
+
+    hashed_password = bcrypt.generate_password_hash(password)
+    new_user = Doctor(name=name, surrname=surrname, pesel=pesel, email=email, password=hashed_password)
+    db.session.add(new_user)
+    db.session.commit()
+
+    return jsonify({
+        "id": new_user.id,
+        "email": new_user.email
+    })
+
 
 if __name__ == "__main__":
     app.run(debug=True)
