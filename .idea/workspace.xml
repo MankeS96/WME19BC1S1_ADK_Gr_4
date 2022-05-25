@@ -6,18 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d28c11af-4ccd-46d6-9073-c81736daaada" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WME19BC1S1_ADK_Gr_4.iml" afterDir="false" />
-
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/MSSADK.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/main.py" beforeDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/WebApp/src/BackEnd/Signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/BackEnd/Signal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,61 +36,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="WME19BC1S1_ADK_Gr_4" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="WME19BC1S1_ADK_Gr_4" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\ogrel\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MSSADK" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MSSADK/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.main" />
-      </list>
-    </recent_temporary>
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/pythonProject2" />
   </component>
   <component name="RunManager">
     <configuration name="Signal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -109,9 +47,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\ogrel\anaconda3\envs\pythonProject12\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebApp/src/BackEnd" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -139,18 +77,21 @@
       <option name="presentableId" value="Default" />
       <updated>1652166704044</updated>
       <workItem from="1652166705955" duration="41000" />
-
       <workItem from="1652213050568" duration="389000" />
-
+      <workItem from="1652903878365" duration="1401000" />
+      <workItem from="1652965664881" duration="619000" />
+      <workItem from="1653310009445" duration="25000" />
+      <workItem from="1653310054305" duration="9000" />
+      <workItem from="1653310135258" duration="171000" />
+      <workItem from="1653310375017" duration="10000" />
+      <workItem from="1653310412784" duration="848000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WME19BC1S1_ADK_Gr_4$Signal.coverage" NAME="Signal Coverage Results" MODIFIED="1652213434969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebApp/src/BackEnd" />
-
+    <SUITE FILE_PATH="coverage/WME19BC1S1_ADK_Gr_4$Signal.coverage" NAME="Signal Coverage Results" MODIFIED="1652965674131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebApp/src/BackEnd" />
   </component>
 </project>
