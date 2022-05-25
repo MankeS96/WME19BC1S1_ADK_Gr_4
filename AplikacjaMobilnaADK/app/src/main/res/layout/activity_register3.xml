@@ -63,8 +63,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:inputType="text"
                     android:textColor="@color/kolor2"
-                    android:inputType="text"/>
+                    android:textColorHint="#757575" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

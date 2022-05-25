@@ -7,7 +7,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -18,7 +17,7 @@ public class RegisterActivity2 extends AppCompatActivity {
     TextView rejestracja22;
     TextView naglowek1, naglowek2;
     RadioGroup radioGroup;
-    RadioButton selectedPlec;
+    //RadioButton selectedPlec;
     DatePicker datePicker;
     Button przejdzDalej2;
 
