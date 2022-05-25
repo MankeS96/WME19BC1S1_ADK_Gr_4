@@ -28,4 +28,9 @@
     <string name="komunikat_po_rejestracji2">Powrót do ekranu logowania</string>
     <string name="brak_konta_button">Nie posiadasz konta?</string>
     <string name="okno_uz_naglowek">Witaj, użytkowniku!</string>
+    <string name="wykonaj_badanie">Wykonaj badanie</string>
+    <string name="historia_badan">Historia badań</string>
+    <string name="profil_uzytkownika">Profil użytkownika</string>
+    <string name="wyniki_badan">Wyniki badań</string>
+    <string name="ustawienia">Ustawienia</string>
 </resources>

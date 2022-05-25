@@ -41,7 +41,7 @@
                 app:hintTextColor="@color/kolor2"
                 app:boxStrokeColor="@color/kolor2"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/user"
+                app:startIconDrawable="@drawable/usericon"
                 app:startIconTint="@color/kolor2"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/kolor2">
