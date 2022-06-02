@@ -2,7 +2,9 @@ package com.example.adk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -36,5 +38,15 @@ public class OknoUzytkownika extends AppCompatActivity {
         naglowekOknouz1.setAnimation(topAnim);
         naglowekOknouz2.setAnimation(topAnim);
         grid.setAnimation(bottomAnim);
+    }
+    public void callOknoBadanie1(View view){
+
+        Intent intent = new Intent(OknoUzytkownika.this, OknoBadanie1.class);
+        startActivity(intent);
+    }
+    public void callOknoWyniki1(View view){
+
+        Intent intent = new Intent(OknoUzytkownika.this, OknoWyniki1.class);
+        startActivity(intent);
     }
 }

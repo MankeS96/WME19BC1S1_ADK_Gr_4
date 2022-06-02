@@ -33,4 +33,7 @@
     <string name="profil_uzytkownika">Profil użytkownika</string>
     <string name="wyniki_badan">Wyniki badań</string>
     <string name="ustawienia">Ustawienia</string>
+    <string name="komunikatBadanie1">Badanie polega na pobraniu trzech sygnałów dźwiękowych, ze wskazanych punktów pomiarowych. Aby przeprowadzić pomiar, upewnij się, że jesteś w cichym pomieszczeniu. Unikaj ewentualnych zakłóceń pomiaru np. głośnych dźwięków.</string>
+    <string name="przeprowadz_pomiar_button">Rozpocznij badanie</string>
+    <string name="komunikatBadanie2">Aby wykonać pierwszy pomiar, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (20 sekund).</string>
 </resources>

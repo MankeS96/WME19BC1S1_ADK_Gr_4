@@ -11,33 +11,35 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class OknoPoRejestracji extends AppCompatActivity {
+public class OknoBadanie1 extends AppCompatActivity {
 
     //Variable
     Animation topAnim, bottomAnim;
-    TextView naglowek1;
-    Button powrotDoLogowania;
+    TextView komunikatBadanie1;
+    Button rozpocznijBadanie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_okno_po_rejestracji);
+        setContentView(R.layout.activity_okno_badanie1);
 
-        //Hooks
-        naglowek1 = findViewById(R.id.komunikat_po_rejestracji);
-        powrotDoLogowania = findViewById(R.id.powrot_do_logowania_button);
 
         //Animations
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
-        naglowek1.setAnimation(topAnim);
-        powrotDoLogowania.setAnimation(bottomAnim);
-    }
-    public void callOknoPoRejestracji(View view){
+        //Hooks
+        komunikatBadanie1 = findViewById(R.id.komunikatBadanie1);
+        rozpocznijBadanie = findViewById(R.id.rozpocznijBadanieButton);
 
-        Intent intent = new Intent(OknoPoRejestracji.this, LoginActivity.class);
+        komunikatBadanie1.setAnimation(topAnim);
+        rozpocznijBadanie.setAnimation(bottomAnim);
+
+    }
+    public void callOknoBadanie2(View view){
+
+        Intent intent = new Intent(OknoBadanie1.this, OknoBadanie2.class);
         startActivity(intent);
     }
 }
