@@ -23,7 +23,7 @@
             android:textColor="@color/kolor1"
             android:textSize="23sp"/>
         <ImageView
-            android:id="@+id/naglowek_oknouzytkownika"
+            android:id="@+id/naglowek_oknoBadanie2"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -51,7 +51,7 @@
                 android:id="@+id/record_Timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/kolor2"
                 android:layout_gravity="center"/>
