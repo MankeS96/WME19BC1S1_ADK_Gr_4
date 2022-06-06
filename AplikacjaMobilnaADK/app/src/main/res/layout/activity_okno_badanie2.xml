@@ -23,7 +23,7 @@
             android:textColor="@color/kolor1"
             android:textSize="23sp"/>
         <ImageView
-            android:id="@+id/naglowek_oknouzytkownika"
+            android:id="@+id/naglowek_oknoBadanie2"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
