@@ -38,4 +38,11 @@
     <string name="status_nagrania">Status nagrania</string>
     <string name="czas_nagrania">Czas nagrania</string>
     <string name="komunikatBadanie2">Aby wykonać pierwszy pomiar, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="komunikatBadanie2_pomiar2">Aby wykonać drugi pomiar, analogicznie do pomiaru pierwszego, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="komunikatBadanie2_pomiar3">Aby wykonać trzeci pomiar, analogicznie do poprzednich pomiarów, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="przejdz_do2pomiaru">Przejdź do drugiego pomiaru</string>
+    <string name="przejdz_do3pomiaru">Przejdź do trzeciego pomiaru</string>
+    <string name="zakoncz_badanie">Zakończ badanie</string>
+    <string name="powrot_do_menu">Powrót do menu</string>
+    <string name="komunikatkoniec">Pomyślnie zakończono badanie. Pobrane pomiary zostaną przeanalizowane przez lekarza. \nAby odebrać wyniki, przejdź do zakładki Wyniki badań w menu użytkownika</string>
 </resources>

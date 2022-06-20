@@ -4,15 +4,18 @@ import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,8 +37,10 @@ public class OknoBadanie2 extends AppCompatActivity {
     Animation topAnim, bottomAnim;
     ImageView recordB, grafika;
     TextView komunikatBadanie2, statusTV3, statusTV;
+    Button rozpocznijBadanieButton;
     private MediaRecorder mRecorder;
-    private long timeLeftInMilliseconds = 30000; //30 sek
+    private long timeLeftInMilliseconds = 10000; //10 sek
+    private String mFileName = null;
     public static final int REQUEST_AUDIO_PERMISSION_CODE = 1;
 
     @Override
@@ -49,34 +54,39 @@ public class OknoBadanie2 extends AppCompatActivity {
         komunikatBadanie2 = findViewById(R.id.komunikatBadanie2);
         statusTV3 = findViewById(R.id.idTVstatus3);
         statusTV = findViewById(R.id.idTVstatus);
+        rozpocznijBadanieButton = findViewById(R.id.rozpocznijBadanieButton);
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
 
         komunikatBadanie2.setAnimation(topAnim);
         //grafika.setAnimation(topAnim);
         statusTV.setAnimation(bottomAnim);
         statusTV3.setAnimation(bottomAnim);
         recordB.setAnimation(bottomAnim);
+        rozpocznijBadanieButton.setAnimation(bottomAnim);
 
+        rozpocznijBadanieButton.setEnabled(false);
+        rozpocznijBadanieButton.setBackgroundColor(getResources().getColor(R.color.gray));
         recordB.setOnClickListener(view -> startRecording());
 
 
         String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-        Log.d("Files", "Path: " + path);
         File directory = new File(path);
+
     }
 
     private String getNameByDateTime() {
-
         Date date = Calendar.getInstance().getTime();
         @SuppressLint("SimpleDateFormat") DateFormat dateFormat = new SimpleDateFormat("yyMMdd_hhmmss");
         //String strDate = "Audio_"; // + dateFormat.format(date);
-        return "A_" + dateFormat.format(date);
+        return "Audio1_" + dateFormat.format(date);
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})
     private void startRecording() {
         if (CheckPermissions()) {
+
             String mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
             mFileName += "/" + getNameByDateTime() + ".3gp";
 
@@ -100,13 +110,19 @@ public class OknoBadanie2 extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})
     public void pauseRecording() {
         mRecorder.stop();
         mRecorder.release();
         mRecorder = null;
         recordB.setImageDrawable(getResources().getDrawable(R.drawable.record));
+        statusTV3.setText("");
         statusTV.setText("Zakończono pomiar nr 1");
+        rozpocznijBadanieButton.setEnabled(true);
+        recordB.setEnabled(false);
+        recordB.setColorFilter(getResources().getColor(R.color.gray));
+        rozpocznijBadanieButton.setBackgroundColor(getResources().getColor(R.color.kolor2));
+
     }
 
     @Override
@@ -161,5 +177,9 @@ public class OknoBadanie2 extends AppCompatActivity {
     private void RequestPermissions() {
         ActivityCompat.requestPermissions(OknoBadanie2.this, new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE}, REQUEST_AUDIO_PERMISSION_CODE);
     }
+    public void callOknoBadanie3(View view){
 
+        Intent intent = new Intent(OknoBadanie2.this, OknoBadanie3.class);
+        startActivity(intent);
+    }
 }

@@ -32,7 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class OknoBadanie3 extends AppCompatActivity {
+public class OknoBadanie4 extends AppCompatActivity {
 
     Animation topAnim, bottomAnim;
     ImageView recordB, grafika;
@@ -47,14 +47,14 @@ public class OknoBadanie3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_okno_badanie3);
+        setContentView(R.layout.activity_okno_badanie4);
 
-        recordB = findViewById(R.id.recordButton_2);
-        grafika = findViewById(R.id.naglowek_oknoBadanie2_2);
-        komunikatBadanie2 = findViewById(R.id.komunikatBadanie2_2);
-        statusTV3 = findViewById(R.id.idTVstatus3_2);
-        statusTV = findViewById(R.id.idTVstatus_2);
-        rozpocznijBadanieButton = findViewById(R.id.rozpocznijBadanieButton_2);
+        recordB = findViewById(R.id.recordButton_3);
+        grafika = findViewById(R.id.naglowek_oknoBadanie2_3);
+        komunikatBadanie2 = findViewById(R.id.komunikatBadanie2_3);
+        statusTV3 = findViewById(R.id.idTVstatus3_3);
+        statusTV = findViewById(R.id.idTVstatus_3);
+        rozpocznijBadanieButton = findViewById(R.id.rozpocznijBadanieButton_3);
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
@@ -80,7 +80,7 @@ public class OknoBadanie3 extends AppCompatActivity {
         Date date = Calendar.getInstance().getTime();
         @SuppressLint("SimpleDateFormat") DateFormat dateFormat = new SimpleDateFormat("yyMMdd_hhmmss");
         //String strDate = "Audio_"; // + dateFormat.format(date);
-        return "Audio2_" + dateFormat.format(date);
+        return "Audio3_" + dateFormat.format(date);
     }
 
     @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables"})
@@ -103,7 +103,7 @@ public class OknoBadanie3 extends AppCompatActivity {
             mRecorder.start();
             startTimer();
             recordB.setImageDrawable(getResources().getDrawable(R.drawable.record2));
-            statusTV.setText("Rozpoczęto pomiar nr 2");
+            statusTV.setText("Rozpoczęto pomiar nr 3");
 
         } else {
             RequestPermissions();
@@ -117,7 +117,7 @@ public class OknoBadanie3 extends AppCompatActivity {
         mRecorder = null;
         recordB.setImageDrawable(getResources().getDrawable(R.drawable.record));
         statusTV3.setText("");
-        statusTV.setText("Zakończono pomiar nr 2");
+        statusTV.setText("Zakończono pomiar nr 3");
         rozpocznijBadanieButton.setEnabled(true);
         recordB.setColorFilter(getResources().getColor(R.color.gray));
         recordB.setEnabled(false);
@@ -175,11 +175,11 @@ public class OknoBadanie3 extends AppCompatActivity {
     }
 
     private void RequestPermissions() {
-        ActivityCompat.requestPermissions(OknoBadanie3.this, new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE}, REQUEST_AUDIO_PERMISSION_CODE);
+        ActivityCompat.requestPermissions(OknoBadanie4.this, new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE}, REQUEST_AUDIO_PERMISSION_CODE);
     }
-    public void callOknoBadanie4(View view){
+    public void callOknoBadanie5(View view){
 
-        Intent intent = new Intent(OknoBadanie3.this, OknoBadanie4.class);
+        Intent intent = new Intent(OknoBadanie4.this, OknoBadanie5.class);
         startActivity(intent);
     }
 }

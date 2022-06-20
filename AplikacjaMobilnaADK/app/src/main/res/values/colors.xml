@@ -10,4 +10,5 @@
     <color name="kolor1">#000000</color>
     <color name="kolor2">#62929E</color>
     <color name="background">#FFFFFF</color>
+    <color name="gray">#BEBEBE</color>
 </resources>

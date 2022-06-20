@@ -117,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(val.isEmpty()){
             pesel_rej.setError("Pole nie może być puste");
             return false;
-        }else if(val.length()!=9){
+        }else if(val.length()!=11){
             pesel_rej.setError("Podano nieprawidłową wartość numeru PESEL!");
             return false;
         }else if(!val.matches(checkspaces)){
