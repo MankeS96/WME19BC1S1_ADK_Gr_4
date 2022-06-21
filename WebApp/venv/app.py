@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, abort
 from models import db, Doctor, Pacient
 from config import AplicationConfig
 from flask_bcrypt import Bcrypt
+# from Signal import o
 
 # Create a Flask Instance
 app = Flask(__name__)
@@ -13,14 +14,10 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-@app.route('/test')
-def test():
-    response_body = {
-        "imie": "Maciej",
-        "nazwisko": "Kacprzyk"
-    }
-    return response_body
-
+# @app.route('/plot', methods=['GET'])
+# def plotSignal():
+#     data = o.normalized_sig
+#     return data
 
 @app.route('/login')
 def loginPage():
@@ -47,7 +44,7 @@ def registerPage():
 
     return jsonify({
         "id": new_user.id,
-        "email": new_user.email
+        "email": new_user.email,
     })
 
 

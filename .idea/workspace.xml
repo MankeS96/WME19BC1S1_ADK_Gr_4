@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d28c11af-4ccd-46d6-9073-c81736daaada" name="Changes" comment="" />
+    <list default="true" id="d28c11af-4ccd-46d6-9073-c81736daaada" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/WebApp/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/FrontEnd/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/FrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/FrontEnd/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/FrontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/venv/Signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/venv/Signal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/venv/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/venv/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/venv/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/venv/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/venv/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/venv/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,14 +81,8 @@
       <updated>1652166704044</updated>
       <workItem from="1652166705955" duration="41000" />
       <workItem from="1652213050568" duration="389000" />
-      <workItem from="1652903878365" duration="1401000" />
-      <workItem from="1652965664881" duration="619000" />
-      <workItem from="1653310009445" duration="25000" />
-      <workItem from="1653310054305" duration="9000" />
-      <workItem from="1653310135258" duration="171000" />
-      <workItem from="1653310375017" duration="10000" />
-      <workItem from="1653310412784" duration="848000" />
-      <workItem from="1653511998114" duration="20000" />
+      <workItem from="1652283978612" duration="56000" />
+      <workItem from="1655846341626" duration="39000" />
     </task>
     <servers />
   </component>

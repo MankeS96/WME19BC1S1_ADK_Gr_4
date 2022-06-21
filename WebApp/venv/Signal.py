@@ -87,7 +87,6 @@ o.env()
 o.plot_signal("enve", 4)
 # o.threshold_filtr()
 
-
 def plot_power_freq(sample_rate, x_lim: None | tuple = None):
     freq, power = o.fft_power_freq(sample_rate)
     plt.plot(freq, power)
