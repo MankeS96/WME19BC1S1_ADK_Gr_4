@@ -13,7 +13,7 @@ class Pacient(db.Model):
     pesel = db.Column(db.String(11), unique=True, nullable=False)
     email = db.Column(db.String(200), unique=True, nullable=False)
     password = db.Column(db.String(20), nullable=False)
-    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date_added = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
     def __repr__(self):
         return f"Pacient('{self.login}', '{self.password}')"
@@ -27,7 +27,7 @@ class Doctor(db.Model):
     pesel = db.Column(db.String(11), unique=True, nullable=False)
     email = db.Column(db.String(200), unique=True, nullable=False)
     password = db.Column(db.String(20), nullable=False)
-    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date_added = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
     # Create a String 
     def __repr__(self):
