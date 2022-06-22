@@ -7,7 +7,6 @@ from flask_bcrypt import Bcrypt
 from Signal import Signal
 import numpy as np
 
-# Create a Flask Instance
 app = Flask(__name__)
 app.config.from_object(AplicationConfig)
 
@@ -23,10 +22,19 @@ def plotSignal():
     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
     o.normalize_signal()
     o.reconstruction()
-    o.env()
-    sig = o.recon_sig
-    data = list(sig[:5000])
+    sigRec = o.recon_sig
+    data = list(sigRec[:10000])
     return jsonify(data)
+
+# @app.route('/widmo', methods=['GET'])
+# def plotSignal():
+#     o = Signal()
+#     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
+#     o.normalize_signal()
+#     o.reconstruction()
+#     sigEnv = o.signal_enve
+#     data = list(sigEnv[:5000])
+#     return jsonify(data)
 
 @app.route('/login')
 def loginPage():
