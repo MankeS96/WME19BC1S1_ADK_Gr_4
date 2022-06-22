@@ -84,13 +84,16 @@ useEffect(() => {
         data={[
           {
             x: signalWidmo.freq,
-            y: signalObw.power,
+            y: signalWidmo.power,
             type: 'line',
             marker: {color: 'blue'}
           },
         ]}
         layout={ {width: "1500", height: 400, title: 'Widmo'} }
       />
+    </div>
+    <div>
+    
     </div>
   </div>
 

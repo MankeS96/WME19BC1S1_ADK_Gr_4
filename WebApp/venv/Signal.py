@@ -67,9 +67,12 @@ class Signal:
         # plt.plot(self.x[:20000], self.signal_enve[:20000], label='envelope')
         # plt.show()
 
-    def fft_power_freq(self, fs):
-        freq, power = signal.welch(self.recon_sig, fs, nperseg=1024)
-        return freq, power
+    def fft_power_freq(self, fs, signal):
+        n = signal.shape[0]
+        freq, power = fftfreq(n, 1 / fs)[:signal.shape[0] // 2], \
+           np.square(np.abs(fft(signal)[:n // 2] / n))
+        return freq, power/np.max(power)
+
 
     # def fft_power_freq(self, fs, signal):
     #     signal_fft = signal
@@ -81,7 +84,7 @@ class Signal:
 
     def spektogram(self):
         Pxx, freqs, bins, im = plt.specgram(self.data[:,1], NFFT=1024, Fs=1, noverlap=900)
-        plt.show()
+        # plt.show()
 
     # def plot_signal(self, title_plot, choice):
     #     if choice == 1:
