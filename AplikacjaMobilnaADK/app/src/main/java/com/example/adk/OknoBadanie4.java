@@ -25,7 +25,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -70,9 +69,6 @@ public class OknoBadanie4 extends AppCompatActivity {
         rozpocznijBadanieButton.setBackgroundColor(getResources().getColor(R.color.gray));
         recordB.setOnClickListener(view -> startRecording());
 
-
-//        String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-//        File directory = new File(path);
 
     }
 
@@ -177,9 +173,9 @@ public class OknoBadanie4 extends AppCompatActivity {
     private void RequestPermissions() {
         ActivityCompat.requestPermissions(OknoBadanie4.this, new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE}, REQUEST_AUDIO_PERMISSION_CODE);
     }
-    public void callOknoBadanie5(View view){
+    public void callOdsluch(View view){
 
-        Intent intent = new Intent(OknoBadanie4.this, OknoBadanie5.class);
+        Intent intent = new Intent(OknoBadanie4.this, Odsluch.class);
         startActivity(intent);
     }
 }
