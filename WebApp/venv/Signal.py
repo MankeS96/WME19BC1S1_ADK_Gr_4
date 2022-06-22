@@ -18,7 +18,8 @@ class Signal:
     title_plot = None
     normalized_sig = None
     signal_enve = None
-    recon_singal = None
+    fftff = None
+    recon_sig = None
 
     def get_signal(self, file_loc):
         self.signal = file_loc
@@ -35,24 +36,23 @@ class Signal:
         avg_sample = np.mean(self.y)
         self.normalized_sig = (self.y - avg_sample) / (max(abs(self.y - avg_sample)))
 
-    def threshold_filtr(self):
-        b, a = signal.ellip(4, 0.01, 120, 0.125)
-        fgust = signal.filtfilt(b, a, self.normalized_sig, method="gust")
-        plt.plot(fgust)
 
-    def lowpass_filter(self, thresh=0.6, wavelet="db5"):
-        thresh = thresh * np.nanmax(self.normalized_sig)
-        coeff = pywt.wavedec(self.normalized_sig, wavelet, mode="per")
-        coeff[1:] = (pywt.threshold(i, value=thresh, mode="soft") for i in coeff[1:])
-        self.recon_singal = pywt.waverec(coeff, wavelet, mode="per")
+    def reconstruction(self):
+        temp = pywt.wavedec(self.normalized_sig, 'haar', level=4)
+        for i in range(1, len(temp)):
+            temp[i] = pywt.threshold(temp[i], 0.3 * max(temp[i]), mode='soft')
+        self.recon_sig = pywt.waverec(temp, 'haar')
+
 
     def env(self):
-        anal_signal = hilbert(self.recon_singal)
+        anal_signal = hilbert(self.recon_sig)
         self.signal_enve = np.abs(anal_signal)
 
     def fft_power_freq(self, fs):
-        signal_fft = self.recon_singal
+        signal_fft = self.recon_sig
         n = signal_fft.shape[0]
+        self.fftff = fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
+               np.square(np.abs(fft(signal_fft)[:n // 2] / n))
         return fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
                np.square(np.abs(fft(signal_fft)[:n // 2] / n))
 
@@ -62,7 +62,7 @@ class Signal:
         elif choice == 2:
             temp_y = self.normalized_sig
         elif choice == 3:
-            temp_y = self.recon_singal
+            temp_y = self.recon_sig
         elif choice == 4:
             temp_y = self.signal_enve
         else:
@@ -81,11 +81,10 @@ o.get_signal('nagranie_1.wav')
 o.plot_signal("Sygnał wejściowy mono", 1)
 o.normalize_signal()
 o.plot_signal("Normalizacja", 2)
-o.lowpass_filter()
+o.reconstruction()
 o.plot_signal("lowpass", 3)
 o.env()
 o.plot_signal("enve", 4)
-# o.threshold_filtr()
 
 def plot_power_freq(sample_rate, x_lim: None | tuple = None):
     freq, power = o.fft_power_freq(sample_rate)

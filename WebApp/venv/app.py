@@ -1,8 +1,11 @@
+import json
+from random import randrange
 from flask import Flask, jsonify, request, abort
 from models import db, Doctor, Pacient
 from config import AplicationConfig
 from flask_bcrypt import Bcrypt
-# from Signal import o
+from Signal import Signal
+import numpy as np
 
 # Create a Flask Instance
 app = Flask(__name__)
@@ -14,10 +17,16 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-# @app.route('/plot', methods=['GET'])
-# def plotSignal():
-#     data = o.normalized_sig
-#     return data
+@app.route('/plot', methods=['GET'])
+def plotSignal():
+    o = Signal()
+    o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
+    o.normalize_signal()
+    o.reconstruction()
+    o.env()
+    sig = o.recon_sig
+    data = list(sig[:5000])
+    return jsonify(data)
 
 @app.route('/login')
 def loginPage():
