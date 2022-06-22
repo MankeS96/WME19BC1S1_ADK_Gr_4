@@ -52,8 +52,10 @@ def plotObwiednia():
 def plotSpektogram():
     o = Signal()
     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
-
-    return jsonify('xd')
+    freq, time = o.spektogram()
+    specFreq = list(freq[:20000])
+    specTime = list(time[:20000])
+    return jsonify({'sFreq': specFreq, 'sPower': specTime})
 
 @app.route('/login')
 def loginPage():

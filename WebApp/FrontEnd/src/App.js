@@ -49,6 +49,21 @@ useEffect(() => {
   );
 }, []);
 
+const [spectogram, setPlotSpectogram] = useState({
+  specFreq: 0,
+  specTime: 0
+});
+
+useEffect(() => {
+  fetch("/spektogram").then((res) =>
+      res.json().then((spectogram) => {
+        setPlotSpectogram({
+          specFreq: spectogram.specFreq,
+          specTime: spectogram.specTime
+        });
+      })
+  );
+}, []);
 
  return (
   <div>
@@ -93,7 +108,16 @@ useEffect(() => {
       />
     </div>
     <div>
-    
+      <Plot
+          data={[
+            {
+              x: spectogram.specTime,
+              y: spectogram.specFreq,
+              type: 'line',
+            },
+          ]}
+          layout={ {width: "1500", height: 400, title: 'Spektogram'} }
+        />
     </div>
   </div>
 

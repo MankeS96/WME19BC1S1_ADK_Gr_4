@@ -2,9 +2,10 @@ import numpy as np
 import pywt
 from numpy.fft import fftfreq
 from scipy import signal
-from scipy.fftpack import hilbert, fft
+from scipy.fftpack import fft
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
+from scipy.fft import fftshift
 
 
 class Signal:
@@ -60,12 +61,9 @@ class Signal:
             for lookbackIndex in range (intervalLength):
                 maximum = max (absoluteSignal [baseIndex - lookbackIndex], maximum)
             outputSignal.append (maximum)
-        
         self.signal_enve = outputSignal
 
-        # plt.plot(self.x[:20000], self.recon_sig[:20000], label='signal')
-        # plt.plot(self.x[:20000], self.signal_enve[:20000], label='envelope')
-        # plt.show()
+
 
     def fft_power_freq(self, fs, signal):
         n = signal.shape[0]
@@ -74,37 +72,34 @@ class Signal:
         return freq, power/np.max(power)
 
 
-    # def fft_power_freq(self, fs, signal):
-    #     signal_fft = signal
-    #     n = signal_fft.shape[0]
-    #     self.fftff = fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
-    #            np.square(np.abs(fft(signal_fft)[:n // 2] / n))
-    #     return fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
-    #            np.square(np.abs(fft(signal_fft)[:n // 2] / n))
-
     def spektogram(self):
-        Pxx, freqs, bins, im = plt.specgram(self.data[:,1], NFFT=1024, Fs=1, noverlap=900)
+        fs = 1;
+        f, t, Sxx = signal.spectrogram(self.recon_sig, fs, return_onesided=False)
+        # plt.pcolormesh(t, fftshift(f), fftshift(Sxx, axes=0), shading='gouraud')
+        # plt.ylabel('Frequency [Hz]')
+        # plt.xlabel('Time [sec]')
         # plt.show()
+        return f, t
 
-    # def plot_signal(self, title_plot, choice):
-    #     if choice == 1:
-    #         temp_y = self.y
-    #     elif choice == 2:
-    #         temp_y = self.normalized_sig
-    #     elif choice == 3:
-    #         temp_y = self.recon_sig
-    #     elif choice == 4:
-    #         temp_y = self.signal_enve
-    #     else:
-    #         print("Błąd w wyborze!")
-    #         exit()
+#     def plot_signal(self, title_plot, choice):
+#         if choice == 1:
+#             temp_y = self.y
+#         elif choice == 2:
+#             temp_y = self.normalized_sig
+#         elif choice == 3:
+#             temp_y = self.recon_sig
+#         elif choice == 4:
+#             temp_y = self.signal_enve
+#         else:
+#             print("Błąd w wyborze!")
+#             exit()
 
-    #     self.title_plot = title_plot
-    #     plt.plot(self.x[:20000], temp_y[:20000])
-    #     plt.xlabel("Time [ms]")
-    #     plt.ylabel("Amplitude")
-    #     plt.title(f"{self.title_plot} z pliku {self.signal}")
-    #     plt.show()
+#         self.title_plot = title_plot
+#         plt.plot(self.x[:20000], temp_y[:20000])
+#         plt.xlabel("Time [ms]")
+#         plt.ylabel("Amplitude")
+#         plt.title(f"{self.title_plot} z pliku {self.signal}")
+#         plt.show()
 
 # o = Signal()
 # o.get_signal('nagranie_1.wav')
@@ -116,14 +111,5 @@ class Signal:
 # o.env()
 # o.spektogram()
 
-# def plot_power_freq(sample_rate, signal, x_lim: None | tuple = None):
-#     freq, power = Signal.fft_power_freq(sample_rate, signal)
-#     return freq, power
-#     plt.plot(freq, power)
-#     if x_lim is not None:
-#         plt.xlim(x_lim)
-#     plt.show()
-
-# plot_power_freq(1)
 
 
