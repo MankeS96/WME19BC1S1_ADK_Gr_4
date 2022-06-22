@@ -45,4 +45,6 @@
     <string name="zakoncz_badanie">Zakończ badanie</string>
     <string name="powrot_do_menu">Powrót do menu</string>
     <string name="komunikatkoniec">Pomyślnie zakończono badanie. Pobrane pomiary zostaną przeanalizowane przez lekarza. \nAby odebrać wyniki, przejdź do zakładki Wyniki badań w menu użytkownika</string>
+    <string name="wybierz_nagranie">Wybierz nagranie, które chcesz odsłuchać:</string>
+    <string name="lista_nagran">Lista pomiarów</string>
 </resources>
