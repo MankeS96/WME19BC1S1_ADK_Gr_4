@@ -22,9 +22,6 @@
             android:name=".Odsluch"
             android:exported="false" />
         <activity
-            android:name=".OknoBadanie5"
-            android:exported="false" />
-        <activity
             android:name=".OknoBadanie4"
             android:exported="false" />
         <activity

@@ -21,12 +21,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.LinkedList;
 
 public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     Animation topAnim, bottomAnim;
-    TextView komunikatOdsluch, statusTV2;
+    TextView komunikatOdsluch, statusTV2, status;
     Button powrot_do_menuB;
     ImageView playB, pauseB;
     Spinner spinner;
@@ -49,7 +50,8 @@ public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSele
         spinner = findViewById(R.id.spinner);
         statusTV2 = findViewById(R.id.statusTV2);
         playB = findViewById(R.id.playB);
-        pauseB = findViewById(R.id.pauseB);
+        status = findViewById(R.id.status);
+        //pauseB = findViewById(R.id.pauseB);
 
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
@@ -58,7 +60,7 @@ public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSele
         spinner.setAnimation(topAnim);
         statusTV2.setAnimation(topAnim);
         playB.setAnimation(bottomAnim);
-        pauseB.setAnimation(bottomAnim);
+        //pauseB.setAnimation(bottomAnim);
         powrot_do_menuB.setAnimation(bottomAnim);
 
         ListFileNames.clear();
@@ -88,11 +90,13 @@ public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSele
         }
 
         playB.setOnClickListener(v -> playAudio());
-        pauseB.setOnClickListener(v -> pausePlaying());
+        //pauseB.setOnClickListener(v -> pausePlaying());
     }
 
     public void playAudio() {
         mPlayer = new MediaPlayer();
+        playB.setEnabled(false);
+        playB.setColorFilter(getResources().getColor(R.color.gray));
         try {
             mPlayer.setDataSource(mFileName);
             mPlayer.prepare();
@@ -101,6 +105,9 @@ public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSele
         } catch (IOException e) {
             Log.e("TAG", "prepare() failed");
         }
+        PrimeRun p = new PrimeRun(143);
+        new Thread(p).start();
+
     }
 
     public void pausePlaying() {
@@ -123,11 +130,35 @@ public class Odsluch extends AppCompatActivity implements AdapterView.OnItemSele
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+    class PrimeRun implements Runnable {
+        long minPrime;
+        PrimeRun(long minPrime) {
+            this.minPrime = minPrime;
+        }
 
-    public void callOknoBadanie5(View view){
-        Intent intent = new Intent(Odsluch.this, OknoBadanie5.class);
+        public void run() {
+            long startTime = System.currentTimeMillis();
+            long elapsedTime = 0L;
+
+            while (elapsedTime < 10*1000) {
+                //perform db poll/check
+                elapsedTime = (new Date()).getTime() - startTime;
+                double x = (double)elapsedTime/ 1000;
+
+                //statusTV3.setText(Double.toString(x) + " sek.");
+                status.setText( String.format("%,.2f sek.", x));
+            }
+
+            status.setText("");
+            playB.setEnabled(true);
+            playB.setColorFilter(getResources().getColor(R.color.kolor2));
+        }
+    }
+
+    public void callOknoUzytkownika(View view){
+
+        Intent intent = new Intent(Odsluch.this, OknoUzytkownika.class);
         startActivity(intent);
     }
 
 }
-
