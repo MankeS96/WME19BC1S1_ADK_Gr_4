@@ -29,8 +29,8 @@ def plotWidmo():
     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
     o.normalize_signal()
     o.reconstruction()
-    rec = o.recon_sig
-    freq, power = o.fft_power_freq(5000)
+    signal = o.recon_sig
+    freq, power = o.fft_power_freq(1, signal)
     sigFreq = list(freq[:20000])
     sigPower = list(power[:20000])
     return jsonify({'freq': sigFreq, 'power': sigPower})
@@ -47,6 +47,13 @@ def plotObwiednia():
     sigRec = list(rec[:20000])
     sigEnv = list(env[:20000])
     return jsonify({'rec': sigRec, 'env': sigEnv})
+
+@app.route('/spektogram', methods=['GET'])
+def plotSpektogram():
+    o = Signal()
+    o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
+
+    return jsonify('xd')
 
 @app.route('/login')
 def loginPage():
