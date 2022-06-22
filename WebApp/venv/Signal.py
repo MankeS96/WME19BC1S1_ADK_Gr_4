@@ -47,9 +47,12 @@ class Signal:
     def env(self):
         absoluteSignal = []
         for sample in self.recon_sig:
-            absoluteSignal.append (abs (sample))
+            if sample == 0:
+                absoluteSignal.append (0)
+            else:
+                absoluteSignal.append (sample)
 
-        intervalLength = 50 
+        intervalLength = 1
         outputSignal = []
         
         for baseIndex in range (intervalLength, len (absoluteSignal)):
@@ -60,60 +63,64 @@ class Signal:
         
         self.signal_enve = outputSignal
 
-        plt.plot(self.x[:20000], self.recon_sig[:20000], label='signal')
-        plt.plot(self.x[:20000], self.signal_enve[:20000], label='envelope')
-        plt.show()
-
+        # plt.plot(self.x[:20000], self.recon_sig[:20000], label='signal')
+        # plt.plot(self.x[:20000], self.signal_enve[:20000], label='envelope')
+        # plt.show()
 
     def fft_power_freq(self, fs):
-        signal_fft = self.recon_sig
-        n = signal_fft.shape[0]
-        self.fftff = fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
-               np.square(np.abs(fft(signal_fft)[:n // 2] / n))
-        return fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
-               np.square(np.abs(fft(signal_fft)[:n // 2] / n))
+        freq, power = signal.welch(self.recon_sig, fs, nperseg=1024)
+        return freq, power
+
+    # def fft_power_freq(self, fs, signal):
+    #     signal_fft = signal
+    #     n = signal_fft.shape[0]
+    #     self.fftff = fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
+    #            np.square(np.abs(fft(signal_fft)[:n // 2] / n))
+    #     return fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
+    #            np.square(np.abs(fft(signal_fft)[:n // 2] / n))
 
     def spektogram(self):
         Pxx, freqs, bins, im = plt.specgram(self.data[:,1], NFFT=1024, Fs=1, noverlap=900)
         plt.show()
 
-    def plot_signal(self, title_plot, choice):
-        if choice == 1:
-            temp_y = self.y
-        elif choice == 2:
-            temp_y = self.normalized_sig
-        elif choice == 3:
-            temp_y = self.recon_sig
-        elif choice == 4:
-            temp_y = self.signal_enve
-        else:
-            print("Błąd w wyborze!")
-            exit()
+    # def plot_signal(self, title_plot, choice):
+    #     if choice == 1:
+    #         temp_y = self.y
+    #     elif choice == 2:
+    #         temp_y = self.normalized_sig
+    #     elif choice == 3:
+    #         temp_y = self.recon_sig
+    #     elif choice == 4:
+    #         temp_y = self.signal_enve
+    #     else:
+    #         print("Błąd w wyborze!")
+    #         exit()
 
-        self.title_plot = title_plot
-        plt.plot(self.x[:20000], temp_y[:20000])
-        plt.xlabel("Time [ms]")
-        plt.ylabel("Amplitude")
-        plt.title(f"{self.title_plot} z pliku {self.signal}")
-        plt.show()
+    #     self.title_plot = title_plot
+    #     plt.plot(self.x[:20000], temp_y[:20000])
+    #     plt.xlabel("Time [ms]")
+    #     plt.ylabel("Amplitude")
+    #     plt.title(f"{self.title_plot} z pliku {self.signal}")
+    #     plt.show()
 
-o = Signal()
-o.get_signal('nagranie_1.wav')
-o.plot_signal("Sygnał wejściowy mono", 1)
-o.normalize_signal()
-o.plot_signal("Normalizacja", 2)
-o.reconstruction()
-o.plot_signal("lowpass", 3)
-o.env()
-o.spektogram()
+# o = Signal()
+# o.get_signal('nagranie_1.wav')
+# o.plot_signal("Sygnał wejściowy mono", 1)
+# o.normalize_signal()
+# o.plot_signal("Normalizacja", 2)
+# o.reconstruction()
+# o.plot_signal("lowpass", 3)
+# o.env()
+# o.spektogram()
 
-def plot_power_freq(sample_rate, x_lim: None | tuple = None):
-    freq, power = o.fft_power_freq(sample_rate)
-    plt.plot(freq, power)
-    if x_lim is not None:
-        plt.xlim(x_lim)
-    plt.show()
+# def plot_power_freq(sample_rate, signal, x_lim: None | tuple = None):
+#     freq, power = Signal.fft_power_freq(sample_rate, signal)
+#     return freq, power
+#     plt.plot(freq, power)
+#     if x_lim is not None:
+#         plt.xlim(x_lim)
+#     plt.show()
 
-plot_power_freq(1)
+# plot_power_freq(1)
 
 

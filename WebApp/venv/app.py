@@ -1,11 +1,8 @@
-import json
-from random import randrange
 from flask import Flask, jsonify, request, abort
 from models import db, Doctor, Pacient
 from config import AplicationConfig
 from flask_bcrypt import Bcrypt
 from Signal import Signal
-import numpy as np
 
 app = Flask(__name__)
 app.config.from_object(AplicationConfig)
@@ -22,19 +19,34 @@ def plotSignal():
     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
     o.normalize_signal()
     o.reconstruction()
-    sigRec = o.recon_sig
-    data = list(sigRec[:10000])
+    sigRecc = o.recon_sig
+    data = list(sigRecc[:20000])
     return jsonify(data)
 
-# @app.route('/widmo', methods=['GET'])
-# def plotSignal():
-#     o = Signal()
-#     o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
-#     o.normalize_signal()
-#     o.reconstruction()
-#     sigEnv = o.signal_enve
-#     data = list(sigEnv[:5000])
-#     return jsonify(data)
+@app.route('/widmo', methods=['GET'])
+def plotWidmo():
+    o = Signal()
+    o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
+    o.normalize_signal()
+    o.reconstruction()
+    rec = o.recon_sig
+    freq, power = o.fft_power_freq(5000)
+    sigFreq = list(freq[:20000])
+    sigPower = list(power[:20000])
+    return jsonify({'freq': sigFreq, 'power': sigPower})
+
+@app.route('/obwiednia', methods=['GET'])
+def plotObwiednia():
+    o = Signal()
+    o.get_signal('C:/Users/MankeS/PycharmProjects/WME19BC1S1_ADK_Gr_4/WebApp/venv/nagranie_1.wav')
+    o.normalize_signal()
+    o.reconstruction()
+    o.env()
+    rec = o.recon_sig
+    env = o.signal_enve
+    sigRec = list(rec[:20000])
+    sigEnv = list(env[:20000])
+    return jsonify({'rec': sigRec, 'env': sigEnv})
 
 @app.route('/login')
 def loginPage():

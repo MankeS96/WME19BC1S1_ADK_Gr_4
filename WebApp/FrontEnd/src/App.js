@@ -16,20 +16,84 @@ function App() {
   );
 }, []);
 
+const [signalObw, setPlotObw] = useState({
+  env: 0,
+  rec: 0
+});
+
+useEffect(() => {
+  fetch("/obwiednia").then((res) =>
+      res.json().then((signalObw) => {
+        setPlotObw({
+          env: signalObw.env,
+          rec: signalObw.rec
+        });
+      })
+  );
+}, []);
+const XX = Object.keys(signalObw.rec);
+
+const [signalWidmo, setPlotWidmo] = useState({
+  freq: 0,
+  power: 0
+});
+
+useEffect(() => {
+  fetch("/widmo").then((res) =>
+      res.json().then((signalWidmo) => {
+        setPlotWidmo({
+          freq: signalWidmo.freq,
+          power: signalWidmo.power
+        });
+      })
+  );
+}, []);
+
+
  return (
   <div>
-    <Plot
-      data={[
-        {
-          x:  X,
-          y: signalWejsc,
-          type: 'line',
-          marker: {color: 'red'}
-        },
-      ]}
-      layout={ {width: "1500", height: 400, title: 'Sygnał wejściowy'} }
-    />
+    <div>
+      <Plot
+        data={[
+          {
+            x: X,
+            y: signalWejsc,
+            type: 'line',
+            marker: {color: 'blue'}
+          },
+        ]}
+        layout={ {width: "1500", height: 400, title: 'Sygnał wejściowy'} }
+      />
+    </div>
+    <div>
+      <Plot
+        data={[
+          {
+            x: XX,
+            y: signalObw.rec,
+            type: 'line',
+            marker: {color: 'blue'}
+          },
+          {type: 'line', x: XX, y: signalObw.env, marker: {color: 'red'}},
+        ]}
+        layout={ {width: "1500", height: 400, title: 'Obwiednia'} }
+      />
+    </div>
+    <div>
+      <Plot
+        data={[
+          {
+            x: signalWidmo.freq,
+            y: signalObw.power,
+            type: 'line',
+            marker: {color: 'blue'}
+          },
+        ]}
+        layout={ {width: "1500", height: 400, title: 'Widmo'} }
+      />
+    </div>
   </div>
+
   
  );
 }
