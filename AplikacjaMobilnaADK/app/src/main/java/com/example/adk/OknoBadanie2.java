@@ -25,7 +25,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -70,9 +69,6 @@ public class OknoBadanie2 extends AppCompatActivity {
         rozpocznijBadanieButton.setBackgroundColor(getResources().getColor(R.color.gray));
         recordB.setOnClickListener(view -> startRecording());
 
-
-        String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-        File directory = new File(path);
 
     }
 
@@ -119,8 +115,8 @@ public class OknoBadanie2 extends AppCompatActivity {
         statusTV3.setText("");
         statusTV.setText("Zakończono pomiar nr 1");
         rozpocznijBadanieButton.setEnabled(true);
-        recordB.setEnabled(false);
         recordB.setColorFilter(getResources().getColor(R.color.gray));
+        recordB.setEnabled(false);
         rozpocznijBadanieButton.setBackgroundColor(getResources().getColor(R.color.kolor2));
 
     }
