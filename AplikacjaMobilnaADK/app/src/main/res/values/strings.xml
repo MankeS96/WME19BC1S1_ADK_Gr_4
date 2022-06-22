@@ -1,8 +1,48 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ADK</string>
     <string name="naglowekMain">Witaj w aplikacji\nobrazującej sygnał\nfonogramu serca!</string>
-    <string name="naglowek2Main">Jeśli posiadasz już konto, zaloguj się. Jeżeli nie, dołącz do nas za pomocą rejestracji</string>
+    <string name="naglowek2Main">Jeśli posiadasz już konto, zaloguj się.\nJeżeli nie, dołącz do nas za pomocą rejestracji</string>
     <string name="logowanieMain">Logowanie</string>
     <string name="rejestracjaMain">Rejestracja</string>
     <string name="todo">TODO</string>
+    <string name="nagloweklogowanie">Logowanie</string>
+    <string name="naglowekRejestracja1" tools:ignore="TypographyFractions">Rejestracja 1/3</string>
+    <string name="naglowekRejestracja2">Rejestracja 2/3</string>
+    <string name="naglowekRejestracja3">Rejestracja 3/3</string>
+    <string name="enter_username">Nazwa użytkownika</string>
+    <string name="enter_password">Hasło</string>
+    <string name="login_button">Zaloguj się</string>
+    <string name="register_button1">Przejdź dalej</string>
+    <string name="enter_name">Imię</string>
+    <string name="enter_surname">Nazwisko</string>
+    <string name="enter_adress" tools:ignore="Typos">Adres email</string>
+    <string name="enter_pesel">Numer PESEL</string>
+    <string name="enter_numer">Podaj numer telefonu</string>
+    <string name="enter_haslo_reg">Ustaw swoje hasło</string>
+    <string name="wybierz_plec">Wybierz płeć:</string>
+    <string name="podaj_date">Podaj swoją datę urodzenia:</string>
+    <string name="zakoncz_rejestracje">Zakończ rejestrację</string>
+    <string name="mezczyzna">Mężczyzna</string>
+    <string name="kobieta">Kobieta</string>
+    <string name="komunikat_po_rejestracji1">Pomyślnie utworzono konto!</string>
+    <string name="komunikat_po_rejestracji2">Powrót do ekranu logowania</string>
+    <string name="brak_konta_button">Nie posiadasz konta?</string>
+    <string name="okno_uz_naglowek">Witaj, użytkowniku!</string>
+    <string name="wykonaj_badanie">Wykonaj badanie</string>
+    <string name="historia_badan">Historia badań</string>
+    <string name="profil_uzytkownika">Profil użytkownika</string>
+    <string name="wyniki_badan">Wyniki badań</string>
+    <string name="ustawienia">Ustawienia</string>
+    <string name="komunikatBadanie1">Badanie polega na pobraniu trzech sygnałów dźwiękowych, ze wskazanych punktów pomiarowych. Aby przeprowadzić pomiar, upewnij się, że jesteś w cichym pomieszczeniu. Unikaj ewentualnych zakłóceń pomiaru np. głośnych dźwięków.</string>
+    <string name="przeprowadz_pomiar_button">Rozpocznij badanie</string>
+    <string name="status_nagrania">Status nagrania</string>
+    <string name="czas_nagrania">Czas nagrania</string>
+    <string name="komunikatBadanie2">Aby wykonać pierwszy pomiar, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="komunikatBadanie2_pomiar2">Aby wykonać drugi pomiar, analogicznie do pomiaru pierwszego, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="komunikatBadanie2_pomiar3">Aby wykonać trzeci pomiar, analogicznie do poprzednich pomiarów, przyłóź telefon skierowany mikrofonem we wskazane miejsce. Następnie rozpocznij nagrywanie. Utrzymuj urządzenie w tej pozycji przez cały czas trwania nagrania (30 sekund).</string>
+    <string name="przejdz_do2pomiaru">Przejdź do drugiego pomiaru</string>
+    <string name="przejdz_do3pomiaru">Przejdź do trzeciego pomiaru</string>
+    <string name="zakoncz_badanie">Zakończ badanie</string>
+    <string name="powrot_do_menu">Powrót do menu</string>
+    <string name="komunikatkoniec">Pomyślnie zakończono badanie. Pobrane pomiary zostaną przeanalizowane przez lekarza. \nAby odebrać wyniki, przejdź do zakładki Wyniki badań w menu użytkownika</string>
 </resources>

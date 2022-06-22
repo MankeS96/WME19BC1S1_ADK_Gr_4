@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity2"
+    android:background="@color/background"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/naglowek_rej2"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/naglowekRejestracja2"
+            android:textAlignment="center"
+            android:textColor="@color/kolor1"
+            android:textSize="30sp"
+            android:layout_marginTop="80sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/wybierz_plec_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wybierz_plec"
+                android:textColor="@color/kolor1"
+                android:textSize="18sp"/>
+
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mezczyzna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/mezczyzna"/>
+                <RadioButton
+                    android:id="@+id/kobieta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/kobieta"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/podaj_date_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/podaj_date"
+                android:textColor="@color/kolor1"
+                android:textSize="18sp"/>
+
+            <DatePicker
+                android:id="@+id/date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"/>
+
+            <Button
+                android:id="@+id/zarejestruj_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_button1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_rectangle"
+                android:layout_marginTop="20dp"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

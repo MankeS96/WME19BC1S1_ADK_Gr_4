@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.adk">
+    <!-- Permission for recording audio and storage of audio in users device -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,10 +16,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADK">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".OknoBadanie5"
+            android:exported="false" />
+        <activity
+            android:name=".OknoBadanie4"
+            android:exported="false" />
+        <activity
+            android:name=".OknoWyniki1"
+            android:exported="false" />
+        <activity
+            android:name=".OknoBadanie3"
+            android:exported="false" />
+        <activity
+            android:name=".OknoBadanie2"
+            android:exported="false" />
+        <activity
+            android:name=".OknoBadanie1"
+            android:exported="false" />
+        <activity
+            android:name=".OknoPoRejestracji"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".OknoUzytkownika"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
