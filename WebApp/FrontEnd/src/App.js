@@ -1,76 +1,37 @@
 import React from "react";
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 import './App.css';
-// import axios from "axios";
 import ReactSignalsPlot from "react-signals-plot";
+import Plot from 'react-plotly.js';
 
-// function App() {
+function App() {
 
-//   // new line start
-//  const [plotData, setPlotData] = useState(null)
+  // new line start
+ const [signal, setPlotData] = useState({});
+ const X = Object.keys(signal);
+ useEffect(() => {
+  // Using fetch to fetch the api from 
+  // flask server it will be redirected to proxy
+  fetch("/plot").then((res) =>
+      res.json().then((signal) => {
+          // Setting a data from api
+          setPlotData(signal);
+      })
+  );
+}, []);
 
-//  function getData() {
-//    axios({
-//      method: "GET",
-//      url:"/plot",
-//    })
-//    .then((response) => {
-//      const res =response.data
-//      setPlotData(({
-//        signalData: res.data}))
-//    }).catch((error) => {
-//      if (error.response) {
-//        console.log(error.response)
-//        console.log(error.response.status)
-//        console.log(error.response.headers)
-//        }
-//    })}
-//    //end of new line 
-//  return (
-//   <ReactSignalsPlot
-//     style={{ width: "100%", height: 500 }}
-//     data={plotData.signalData}
-//     samplesLimit={300}
-//     interactive={true}
-//    />
-//  );
-// }
-// export default App;
-
-const series = {
-  data: [
+ return (
+  <Plot
+  data={[
     {
-      id: "EX",
-      values: [
-        { x: 1, y: 5 },
-        { x: 2, y: 10 },
-        { x: 3, y: 1 },
-        { x: 4, y: 3 },
-        { x: 5, y: 12 },
-        { x: 6, y: 4 },
-        { x: 7, y: 0 },
-        { x: 8, y: 13 },
-        { x: 9, y: 7 }
-      ]
-    }
-  ],
-  labels: {
-    x: "X, seconds",
-    y: "Y, volts"
-  }
-};
-
-class PlotExample extends React.Component {
-  render() {
-    return (
-      <ReactSignalsPlot
-        style={{ width: "100%", height: 400 }}
-        data={series.data}
-        labels={series.labels}
-        interactive={true}
-      />
-    );
-  }
+      x:  X,
+      y: signal,
+      type: 'line',
+      marker: {color: 'red'}
+    },
+  ]}
+  layout={ {width: "1500", height: 400, title: 'Sygnał wejściowy'} }
+/>
+ );
 }
-
-export default PlotExample;
+export default App;
