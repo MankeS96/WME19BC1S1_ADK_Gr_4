@@ -45,8 +45,25 @@ class Signal:
 
 
     def env(self):
-        anal_signal = hilbert(self.recon_sig)
-        self.signal_enve = np.abs(anal_signal)
+        absoluteSignal = []
+        for sample in self.recon_sig:
+            absoluteSignal.append (abs (sample))
+
+        intervalLength = 50 
+        outputSignal = []
+        
+        for baseIndex in range (intervalLength, len (absoluteSignal)):
+            maximum = 0
+            for lookbackIndex in range (intervalLength):
+                maximum = max (absoluteSignal [baseIndex - lookbackIndex], maximum)
+            outputSignal.append (maximum)
+        
+        self.signal_enve = outputSignal
+
+        plt.plot(self.x[:20000], self.recon_sig[:20000], label='signal')
+        plt.plot(self.x[:20000], self.signal_enve[:20000], label='envelope')
+        plt.show()
+
 
     def fft_power_freq(self, fs):
         signal_fft = self.recon_sig
@@ -55,6 +72,10 @@ class Signal:
                np.square(np.abs(fft(signal_fft)[:n // 2] / n))
         return fftfreq(n, 1 / fs)[:signal_fft.shape[0] // 2], \
                np.square(np.abs(fft(signal_fft)[:n // 2] / n))
+
+    def spektogram(self):
+        Pxx, freqs, bins, im = plt.specgram(self.data[:,1], NFFT=1024, Fs=1, noverlap=900)
+        plt.show()
 
     def plot_signal(self, title_plot, choice):
         if choice == 1:
@@ -70,7 +91,7 @@ class Signal:
             exit()
 
         self.title_plot = title_plot
-        plt.plot(self.x, temp_y)
+        plt.plot(self.x[:20000], temp_y[:20000])
         plt.xlabel("Time [ms]")
         plt.ylabel("Amplitude")
         plt.title(f"{self.title_plot} z pliku {self.signal}")
@@ -84,7 +105,7 @@ o.plot_signal("Normalizacja", 2)
 o.reconstruction()
 o.plot_signal("lowpass", 3)
 o.env()
-o.plot_signal("enve", 4)
+o.spektogram()
 
 def plot_power_freq(sample_rate, x_lim: None | tuple = None):
     freq, power = o.fft_power_freq(sample_rate)
